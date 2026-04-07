@@ -37,132 +37,126 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-white px-4 py-12">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30">
-            <span className="text-cyan-400 text-sm font-medium">🍸 AI × Food & Cooking</span>
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30">
+            <span className="text-orange-400 text-sm font-medium">🍸 AI × Food & Cooking</span>
           </div>
-          <h1 className="text-4xl font-bold text-white mb-3">AI Cocktail & Mixology Recipe Generator</h1>
-          <p className="text-gray-400 text-lg">Generate cocktail recipes with ingredients, instructions, and garnishes</p>
+          <h1 className="text-4xl font-bold text-orange-400 mb-3">AI Cocktail Mixer</h1>
+          <p className="text-gray-400 text-lg">Generate professional cocktail recipes and mixology tips with AI</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-300">Base Spirit Preference</label>
-              <select name="spirit" value={form.spirit} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all text-sm">
+              <select name="spirit" value={form.spirit} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all">
                 <option value="">Select spirit</option>
-                <option value="vodka">Vodka</option>
-                <option value="gin">Gin</option>
-                <option value="rum">Rum (White or Dark)</option>
-                <option value="tequila">Tequila (Blanco or Reposado)</option>
-                <option value="whiskey">Whiskey / Bourbon</option>
-                <option value="brandy">Brandy / Cognac</option>
-                <option value="mezcal">Mezcal</option>
-                <option value="scotch">Scotch</option>
-                <option value="aperol">Aperol / Campari</option>
-                <option value="wine">Wine / Vermouth</option>
-                <option value="no-spirit">Spirit-Free</option>
+                <option value="Vodka">Vodka</option>
+                <option value="Gin">Gin</option>
+                <option value="Rum">Rum (Light or Dark)</option>
+                <option value="Tequila">Tequila (Blanco or Reposado)</option>
+                <option value="Whiskey/Bourbon">Whiskey / Bourbon</option>
+                <option value="Brandy/Cognac">Brandy / Cognac</option>
+                <option value="Mezcal">Mezcal</option>
+                <option value="Absinthe">Absinthe</option>
+                <option value="Sake">Sake</option>
+                <option value="No Preference">No Preference</option>
               </select>
             </div>
 
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-300">Flavor Profile</label>
-              <select name="flavorProfile" value={form.flavorProfile} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all text-sm">
+              <select name="flavorProfile" value={form.flavorProfile} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all">
                 <option value="">Select flavor</option>
-                <option value="sweet">Sweet</option>
-                <option value="sour">Sour</option>
-                <option value="bitter">Bitter</option>
-                <option value="savory">Savory / Umami</option>
-                <option value="refreshing">Refreshing / Light</option>
-                <option value="smoky">Smoky</option>
-                <option value="fruity">Fruity</option>
-                <option value="floral">Floral</option>
-                <option value="spicy">Spicy</option>
-                <option value="herbal">Herbal</option>
-                <option value="tropical">Tropical</option>
+                <option value="Sweet">Sweet</option>
+                <option value="Sour">Sour</option>
+                <option value="Bitter">Bitter</option>
+                <option value="Savory/Umami">Savory / Umami</option>
+                <option value="Fruity">Fruity</option>
+                <option value="Herbal">Herbal</option>
+                <option value="Spicy">Spicy</option>
+                <option value="Smoky">Smoky</option>
+                <option value="Floral">Floral</option>
+                <option value="Refreshing/Citrus">Refreshing / Citrus</option>
+                <option value="Creamy">Creamy</option>
+                <option value="Complex/Multi-layered">Complex / Multi-layered</option>
               </select>
             </div>
 
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-300">Occasion Type</label>
-              <select name="occasion" value={form.occasion} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all text-sm">
+              <select name="occasion" value={form.occasion} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all">
                 <option value="">Select occasion</option>
-                <option value="dinner-party">Dinner Party</option>
-                <option value="happy-hour">Happy Hour / Aperitif</option>
-                <option value="holiday">Holiday / Celebration</option>
-                <option value="summer-party">Summer Party / BBQ</option>
-                <option value="date-night">Date Night</option>
-                <option value="brunch">Brunch</option>
-                <option value="big-batch">Big Batch / Punch</option>
-                <option value="after-dinner">After Dinner / Digestif</option>
-                <option value="casual">Casual / Everyday</option>
+                <option value="Casual Happy Hour">Casual Happy Hour</option>
+                <option value="Dinner Party">Dinner Party</option>
+                <option value="Date Night">Date Night</option>
+                <option value="Summer BBQ">Summer BBQ</option>
+                <option value="Holiday Celebration">Holiday Celebration</option>
+                <option value="Tiki Party">Tiki Party</option>
+                <option value="Brunch">Brunch</option>
+                <option value="Big Game Watching">Big Game Watching</option>
+                <option value="Wedding Reception">Wedding Reception</option>
+                <option value="Corporate Event">Corporate Event</option>
+                <option value="Beach Day">Beach Day</option>
+                <option value="Late Night Bar">Late Night Bar</option>
               </select>
-            </div>
-
-            <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-300">Available Bar Tools</label>
-              <input type="text" name="barTools" value={form.barTools} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all text-sm" placeholder="e.g. shaker, muddler, strainer, blender, jigger" />
             </div>
 
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-300">Guest Count</label>
-              <select name="guestCount" value={form.guestCount} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all text-sm">
+              <select name="guestCount" value={form.guestCount} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all">
                 <option value="">Select guest count</option>
-                <option value="1">1 (Solo / Personal)</option>
-                <option value="2">2 people</option>
-                <option value="4">4 people</option>
-                <option value="6">6 people</option>
-                <option value="8">8 people</option>
-                <option value="10+">10+ people (Batch)</option>
+                <option value="Solo (1)">Solo (1 drink)</option>
+                <option value="Couple (2)">Couple (2 drinks)</option>
+                <option value="Small Group (3-5)">Small Group (3-5)</option>
+                <option value="Medium Group (6-10)">Medium Group (6-10)</option>
+                <option value="Large Party (10+)">Large Party (10+)</option>
+                <option value="Batch Cocktails for 20+">Batch Cocktails for 20+</option>
               </select>
             </div>
 
             <div className="space-y-2">
+              <label className="block text-sm font-medium text-gray-300">Bar Tools Available</label>
+              <input name="barTools" value={form.barTools} onChange={handleChange} placeholder="e.g. shaker, muddler, blender, jigger" className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all" />
+            </div>
+
+            <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-300">Preferred Cocktail Style</label>
-              <select name="cocktailStyle" value={form.cocktailStyle} onChange={handleChange} required className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all text-sm">
+              <select name="cocktailStyle" value={form.cocktailStyle} onChange={handleChange} className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all">
                 <option value="">Select style</option>
-                <option value="classic">Classic (Old Fashioned, Martini, etc.)</option>
-                <option value="tiki">Tiki / Exotic</option>
-                <option value="modern">Modern / Contemporary</option>
-                <option value="fizzy">Fizzy / Effervescent</option>
-                <option value="creamy">Creamy / Dessert</option>
-                <option value="bitter-complex">Bitter & Complex</option>
-                <option value="fresh-light">Fresh & Light</option>
-                <option value="smoky">Smoky & Bold</option>
+                <option value="Classic">Classic / Timeless</option>
+                <option value="Modern/Twist">Modern / Twist on Classic</option>
+                <option value="Tiki/Tropical">Tiki / Tropical</option>
+                <option value="Sour">Sour / Egg White</option>
+                <option value="Martini/Dry">Martini / Dry</option>
+                <option value="Fizz/Spritzer">Fizz / Spritzer</option>
+                <option value="Stirred/Spirits-Forward">Stirred / Spirits-Forward</option>
+                <option value="Layered/Float">Layered / Float</option>
+                <option value="Smoky/Clairfy">Smoky / Clarify</option>
+                <option value="No Preference">No Preference</option>
               </select>
             </div>
 
             <div className="space-y-2 md:col-span-2">
               <label className="block text-sm font-medium text-gray-300">Dietary / Non-Alcoholic Option</label>
-              <div className="grid grid-cols-3 gap-3">
-                {[
-                  { value: "full-alcohol", label: "🍸 Full Alcohol", desc: "Standard cocktail" },
-                  { value: "low-abv", label: "🌿 Low ABV", desc: "Light / Spritz style" },
-                  { value: "mocktail", label: "🍹 Mocktail", desc: "Zero alcohol" },
-                ].map((opt) => (
-                  <label key={opt.value} className={`flex flex-col items-center gap-1 p-3 rounded-xl border cursor-pointer transition-all text-center ${form.nonAlcoholic === opt.value ? "border-cyan-500 bg-cyan-500/10" : "border-gray-700 bg-gray-800/30 hover:border-gray-600"}`}>
-                    <input type="radio" name="nonAlcoholic" value={opt.value} checked={form.nonAlcoholic === opt.value} onChange={handleChange} className="sr-only" />
-                    <span className={`text-sm font-medium ${form.nonAlcoholic === opt.value ? "text-cyan-400" : "text-gray-300"}`}>{opt.label}</span>
-                    <span className="text-xs text-gray-500">{opt.desc}</span>
-                  </label>
-                ))}
-              </div>
+              <select name="nonAlcoholic" value={form.nonAlcoholic} onChange={handleChange} className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all">
+                <option value="">Select option</option>
+                <option value="Full Alcohol">Full Alcohol — Classic cocktail</option>
+                <option value="Low ABV">Low ABV — Lighter alcohol content</option>
+                <option value="Mocktail">Mocktail — Non-alcoholic, full flavor</option>
+                <option value="Virtue Cocktail">Virtue Cocktail — 0% ABV premium mocktail</option>
+              </select>
             </div>
           </div>
 
-          <button type="submit" disabled={loading} className="w-full bg-cyan-500 hover:bg-cyan-400 disabled:bg-cyan-500/50 text-white font-semibold py-4 rounded-xl transition-all duration-200 text-base flex items-center justify-center gap-2">
-            {loading ? (
-              <>
-                <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>
-                Mixing Your Cocktail...
-              </>
-            ) : "🍸 Generate My Cocktail Recipe"}
+          <button type="submit" disabled={loading} className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-500/50 text-white font-semibold py-4 rounded-xl transition-all duration-200 text-lg shadow-lg shadow-orange-500/20">
+            {loading ? "Mixing Cocktail..." : "Generate Cocktail Recipe"}
           </button>
         </form>
 
         {output && (
-          <div className="bg-gray-800/50 border border-gray-700 rounded-2xl p-6 md:p-8">
-            <h2 className="text-xl font-semibold text-cyan-400 mb-4">Cocktail Recipe</h2>
-            <div className="prose prose-invert prose-cyan max-w-none text-gray-200 whitespace-pre-wrap text-sm leading-relaxed">{output}</div>
+          <div className="bg-gray-800/40 border border-gray-700 rounded-2xl p-6">
+            <h2 className="text-lg font-semibold text-orange-400 mb-4">Cocktail Recipe</h2>
+            <div className="prose prose-invert prose-orange max-w-none text-gray-200 whitespace-pre-wrap text-sm leading-relaxed">{output}</div>
           </div>
         )}
       </div>
